@@ -1,0 +1,31 @@
+.panel-container {
+    height: 100%;
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.panel {
+    min-height: 800px;
+    width: 400px;
+    background-color: lightgray;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+
+    .task {
+        background-color: white;
+        height: 100px;
+        width: 350px;
+        margin-top: 10px;
+        border-radius: 5px;
+
+    }
+}

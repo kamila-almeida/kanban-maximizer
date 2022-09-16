@@ -1,0 +1,29 @@
+<div class="panel-container">
+  <div class="panel">
+    <div class="task" *ngFor="let task of todoList">
+      <p>{{task.Id}}</p>
+      {{task.Summary}}
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="task" *ngFor="let task of inProgressList">
+      <p>{{task.Id}}</p>
+      {{task.Summary}}
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="task" *ngFor="let task of testingList">
+      <p>{{task.Id}}</p>
+      {{task.Summary}}
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="task" *ngFor="let task of doneList">
+      <p>{{task.Id}}</p>
+      {{task.Summary}}
+    </div>
+  </div>
+</div>

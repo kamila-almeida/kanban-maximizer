@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { KanbanService } from './services/kanban.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips'
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    DragDropModule
+    DragDropModule,
+    MatCardModule,
+    MatChipsModule
   ],
   providers: [KanbanService],
   bootstrap: [AppComponent]

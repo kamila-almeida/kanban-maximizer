@@ -5,8 +5,10 @@ export interface ITask {
     Type: string;
     Priority: string;
     Tags: string;
+    TagsList: string[];
     Estimate: number;
     Assignee: string;
+    AssigneeInitials: string;
     ImgUrl: string;
     RankId: number;
 }

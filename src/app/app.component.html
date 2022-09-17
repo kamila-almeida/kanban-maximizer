@@ -1,0 +1,28 @@
+<div class="panel-container" cdkDropListGroup>
+
+  <div class="panel" *ngFor="let taskList of taskListByStatus">
+    <div class="panel-header">
+      <span class="panel-title">{{taskList.title}}</span> - {{this.taskList.tasks.length}} items
+    </div>
+    <div class="panel-body" cdkDropList [cdkDropListData]="taskList.tasks" (cdkDropListDropped)="drop($event)">
+      <mat-card class="task" cdkDrag
+        [ngClass]="{'priority-low' : task.Priority === 'LOW', 'priority-normal' : task.Priority === 'NORMAL', 'priority-high' : task.Priority === 'HIGH', 'priority-critical' : task.Priority === 'CRITICAL', 'priority-release-breaker' : task.Priority === 'RELEASE BREAKER'}"
+        *ngFor="let task of taskList.tasks">
+        <p class="task-id">{{task.Id}}</p>
+        {{task.Summary}}
+
+        <div class="additional-information">
+          <div class="tags-container">
+            <mat-chip class="tags" *ngFor="let tag of task.TagsList">
+              {{tag}}
+            </mat-chip>
+          </div>
+
+          <mat-chip class="initials">
+            {{task.AssigneeInitials}}
+          </mat-chip>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

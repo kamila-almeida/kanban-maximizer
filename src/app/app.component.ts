@@ -34,7 +34,6 @@ export class AppComponent {
   }
 
   drop(event: CdkDragDrop<ITask[]>) {
-    debugger
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
